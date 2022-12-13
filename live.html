@@ -1,0 +1,186 @@
+
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+      
+    </head>
+
+    <body>
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                   
+                    <!--Footer About-->
+
+<div class="col-md-6 col-lg-3">
+                        <div class="footer-about">
+                          
+                           
+                        </div>
+                    </div
+ </div </div </div
+                     <!--Contact Us-->
+
+<div class="col-md-6 col-lg-3">
+                        
+<
+                         
+                 
+           <center><h5><bgcolor='#FF1176' style='color:black; font-weight:bold;'>All Right Reserved</h5><bgcolor='#FF1176' style='color:black; font-weight:bold;'>2022 sentul babakan madang</center>
+           <!-- Newswletter -->
+
+           
+		
+
+	
+	
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<div class="code-editor">
+  <div class="code"> <bgcolor='#FF1176' style='color:orange; font-weight:bold;'>Live Code Editor menggunakan bahasa pengembangan web populer, HTML, CSS, dan JavaScript.
+    <div class="html-code" data-html>
+      <h1><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML">HTML</h1>
+      <textarea data-enable-grammarly="false" data-gramm_editor="false" data-gramm="false" spellcheck="false" tabindex="-1" data-textarea></textarea>
+    </div>
+    <div class="css-code" data-css>
+      <h1><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="CSS">CSS</h1>
+      <textarea data-enable-grammarly="false" data-gramm_editor="false" data-gramm="false" spellcheck="false" tabindex="-1" data-textarea></textarea>
+    </div>
+    <div class="js-code" data-js>
+      <h1><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JS">JS</h1>
+      <textarea data-enable-grammarly="false" data-gramm_editor="false" data-gramm="false" spellcheck="false" tabindex="-1" data-textarea></textarea>
+    </div>
+  </div>
+  <iframe class="result" data-result></iframe>
+</div>
+
+<style>
+:root {
+  --dark-blue: #14007a;
+  --blue: #1a009c;
+  --light-blue: rgb(74, 225, 255);
+  --pink: rgb(225, 40, 113);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(45deg, var(--light-blue), var(--blue));
+}
+
+.code-editor {
+  width: 99vw;
+  height: 99vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 1rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.code {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1rem;
+
+  border-radius: 0 1rem 1rem 0;
+  background-color: var(--dark-blue);
+  overflow-y: auto;
+}
+
+h1 {
+  margin-block: 1rem;
+  font: 600 1.2rem sans-serif;
+  color: #fff;
+}
+
+h1 > img {
+  width: 1.3rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.code textarea {
+  width: 100%;
+  height: calc(100% - 4rem);
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  color: var(--light-blue);
+  background-color: var(--blue);
+  resize: vertical;
+}
+
+.code textarea::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+.code textarea::-webkit-scrollbar-thumb {
+  border-radius: 0.4rem;
+  background-color: var(--pink);
+}
+
+.result {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+
+
+<script>
+const htmlCode = document.querySelector("[data-html] textarea"),
+  cssCode = document.querySelector("[data-css] textarea"),
+  jsCode = document.querySelector("[data-js] textarea");
+const result = document.querySelector("[data-result]");
+const allTextarea = document.querySelectorAll("[data-textarea]");
+
+function run() {
+  result.contentDocument.body.innerHTML =
+    `<style>${cssCode.value}</style>` + htmlCode.value;
+  result.contentWindow.eval(jsCode.value);
+}
+
+htmlCode.onkeyup = () => run();
+cssCode.onkeyup = () => run();
+jsCode.onkeyup = () => run();
+
+allTextarea.forEach((languageArea) => {
+  languageArea.addEventListener("keydown", (e) => {
+    if (e.key == "Tab") {
+      e.preventDefault();
+
+      languageArea.setRangeText(
+        "  ",
+        languageArea.selectionStart,
+        languageArea.selectionStart,
+        "end"
+      );
+    }
+  });
+});
+</script>
