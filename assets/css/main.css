@@ -32,13 +32,8 @@
 # General
 --------------------------------------------------------------*/
 
-body
-{
-  background-color:skyblue;
-border-style: groove;
-border-width:25px;
-border-color:#FF69B4;
-}
+
+
 body {
   font-family: var(--font-default);
   color: var(--color-default);
